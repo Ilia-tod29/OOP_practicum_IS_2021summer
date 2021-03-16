@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/FMI/OOP/Practicums/starWarsHomework/Jedi.cpp
+Jedi.h
+E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
+
+E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
+Planet.h
+E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
+iostream
+-
+cstring
+-
+
+E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
+iostream
+-
+cstring
+-
+
+E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
+Planet.h
+E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
+iostream
+-
+cstring
+-
+
+E:/FMI/OOP/Practicums/starWarsHomework/main.cpp
+Planet.h
+E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
+Stormtrooper.h
+E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
+Jedi.h
+E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
+iostream
+-
+cstring
+-
+
