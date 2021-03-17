@@ -42,5 +42,6 @@ public:
     char* getType();
     Planet getPlanet();
 
-    void print() const;
+    friend std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper);
+   // void print() const;
 };

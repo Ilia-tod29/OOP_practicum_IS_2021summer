@@ -86,27 +86,34 @@ std::ostream& operator<<(std::ostream& os, const Planet& planet) {
     os << planet.planetSystem << endl;
     os << planet.republic << endl;
     switch (planet.type) {
-        case (planetType)0: cout << "Chthonian Planet"; break;
-        case (planetType)1: cout << "Carbon Planet"; break;
-        case (planetType)2: cout << "Coreless Planet"; break;
-        case (planetType)3: cout << "Desert Planet"; break;
-        case (planetType)4: cout << "Gas Dwarf"; break;
-        case (planetType)5: cout << "Gas Giant"; break;
-        case (planetType)6: cout << "Helium Planet"; break;
-        case (planetType)7: cout << "Ice Giant"; break;
-        case (planetType)8: cout << "Ice Planet"; break;
-        case (planetType)9: cout << "Iron Planet"; break;
-        case (planetType)10: cout << "Lava Planet"; break;
-        case (planetType)11: cout << "Ocean Planet"; break;
-        case (planetType)12: cout << "Protopanet"; break;
-        case (planetType)13: cout << "Puffy Planet"; break;
-        case (planetType)14: cout << "Silicate Planet"; break;
-        case (planetType)15: cout << "Terrestrial Planet"; break;
+        case (planetType)0: os << "Chthonian Planet" << endl; break;
+        case (planetType)1: os << "Carbon Planet" << endl; break;
+        case (planetType)2: os << "Coreless Planet" << endl; break;
+        case (planetType)3: os << "Desert Planet" << endl; break;
+        case (planetType)4: os << "Gas Dwarf" << endl; break;
+        case (planetType)5: os << "Gas Giant" << endl; break;
+        case (planetType)6: os << "Helium Planet" << endl; break;
+        case (planetType)7: os << "Ice Giant" << endl; break;
+        case (planetType)8: os << "Ice Planet" << endl; break;
+        case (planetType)9: os << "Iron Planet" << endl; break;
+        case (planetType)10: os << "Lava Planet" << endl; break;
+        case (planetType)11: os << "Ocean Planet" << endl; break;
+        case (planetType)12: os << "Protopanet" << endl; break;
+        case (planetType)13: os << "Puffy Planet" << endl; break;
+        case (planetType)14: os << "Silicate Planet" << endl; break;
+        case (planetType)15: os << "Terrestrial Planet" << endl; break;
+        default: os << "Invalid type" << endl; break;
     }
+    return os;
 }
 
-void Planet::print() const {
-    cout << "Planet name: \'" << this->name << "\'. ";
-    cout << "It is from the system \'" << this->planetSystem << "\'. ";
-    cout << this->name << " is owned by " << this->republic << " republic.";
-}
+//template<class T>
+//void Planet::print(T toPrint) {
+//    cout << toPrint << endl;
+//}
+
+//void Planet::print() const {
+//    cout << "Planet name: \'" << this->name << "\'. ";
+//    cout << "It is from the system \'" << this->planetSystem << "\'. ";
+//    cout << this->name << " is owned by " << this->republic << " republic.";
+//}

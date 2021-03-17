@@ -1,4 +1,5 @@
 #include "Stormtrooper.h"
+#include "Planet.h"
 
 void Stormtrooper::cpy(const Stormtrooper& _stormtrooper) {
     this->id = new char[strlen(_stormtrooper.id) + 1];
@@ -68,35 +69,53 @@ stormtrooperRank Stormtrooper::getRank() {return this->rank;}
 char* Stormtrooper::getType() {return this->type;}
 Planet Stormtrooper::getPlanet() {return this->planet;}
 
-void Stormtrooper::print() const {
-    cout << "Stormtrooper ID: " << this->id << endl;
-    switch (this->rank) {
-        case Cadet:
-            cout << "Stormtrooper rank: Cadet" << endl;
-            break;
-        case Private:
-            cout << "Stormtrooper rank: Private" << endl;
-            break;
-        case LanceCorporal:
-            cout << "Stormtrooper rank: LanceCorporal" << endl;
-            break;
-        case Corporal:
-            cout << "Stormtrooper rank: Corporal" << endl;
-            break;
-        case Sergeant:
-            cout << "Stormtrooper rank: Sergeant" << endl;
-            break;
-        case StaffSergeant:
-            cout << "Stormtrooper rank: StaffSergeant" << endl;
-            break;
-        case MasterSergeant:
-            cout << "Stormtrooper rank: MasterSergeant"  << endl;
-            break;
-        default:
-            cout << "This Stormtrooper has no rank" << endl;
-            break;
+
+std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper) {
+    os << stormtrooper.id << endl;
+    switch (stormtrooper.rank) {
+        case (stormtrooperRank)0: os << "Cadet"<< endl; break;
+        case (stormtrooperRank)1: os << "Private"<< endl; break;
+        case (stormtrooperRank)2: os << "Lance Corporal"<< endl; break;
+        case (stormtrooperRank)3: os << "Corporal"<< endl; break;
+        case (stormtrooperRank)4: os << "Sergeant"<< endl; break;
+        case (stormtrooperRank)5: os << "Staff Sergeant"<< endl; break;
+        case (stormtrooperRank)6: os << "Master Sergeant"<< endl; break;
+        default: os << "Invalid rank" << endl; break;
     }
-    cout << "Stormtrooper type: " << this->type << endl;
-    cout << "Stormtrooper's planet: " << endl;
-    this->planet.print();
+    os << stormtrooper.type << endl;
+    os << stormtrooper.planet.getName() << endl;
+    return os;
 }
+
+//void Stormtrooper::print() const {
+//    cout << "Stormtrooper ID: " << this->id << endl;
+//    switch (this->rank) {
+//        case Cadet:
+//            cout << "Stormtrooper rank: Cadet" << endl;
+//            break;
+//        case Private:
+//            cout << "Stormtrooper rank: Private" << endl;
+//            break;
+//        case LanceCorporal:
+//            cout << "Stormtrooper rank: LanceCorporal" << endl;
+//            break;
+//        case Corporal:
+//            cout << "Stormtrooper rank: Corporal" << endl;
+//            break;
+//        case Sergeant:
+//            cout << "Stormtrooper rank: Sergeant" << endl;
+//            break;
+//        case StaffSergeant:
+//            cout << "Stormtrooper rank: StaffSergeant" << endl;
+//            break;
+//        case MasterSergeant:
+//            cout << "Stormtrooper rank: MasterSergeant"  << endl;
+//            break;
+//        default:
+//            cout << "This Stormtrooper has no rank" << endl;
+//            break;
+//    }
+//    cout << "Stormtrooper type: " << this->type << endl;
+//    cout << "Stormtrooper's planet: " << endl;
+//    this->planet.print();
+//}

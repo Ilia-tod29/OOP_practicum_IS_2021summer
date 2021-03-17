@@ -12,10 +12,13 @@ int main() {
     Planet stewjon("Stewjon", "Astronomical object", "no", (planetType)6);
     Stormtrooper Ilia("FN-72061", MasterSergeant, "Black ninja", earth);
     Jedi ObiWan("Obi Wan Kenobi", (jediRank)6, 9999.9, stewjon, "Human", "No data");
-    Ilia.print();
-    cout << endl << endl;
-    ObiWan.print();
-    cout << endl;
-    earth.print();
+    cout << Ilia << endl;
+    cout << ObiWan << endl;
+    cout << earth << endl;
+    cout << "-----------------------operator '<<' ^ -----------------------" << endl;
+    cout << "-----------------------print() \\/ -----------------------" << endl;
+    earth.print<Planet>(earth);
+    earth.print(Ilia);
+    earth.print(ObiWan);
     return 0;
 }

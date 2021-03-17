@@ -46,5 +46,9 @@ public:
     planetType getType();
 
     friend std::ostream& operator<<(std::ostream& os, const Planet& planet);
-    void print() const;
+
+    template<class T>
+    void print(T toPrint){
+        cout << toPrint << endl;
+    }
 };

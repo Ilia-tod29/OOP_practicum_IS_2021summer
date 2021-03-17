@@ -1,4 +1,5 @@
 #include "Jedi.h"
+#include "Planet.h"
 
 void Jedi::cpy(const Jedi& _jedi) {
     this->name = new char[strlen(_jedi.name) + 1];
@@ -82,38 +83,58 @@ Planet Jedi::getPlanet() {return this->planet;}
 char* Jedi::getSpecies() {return this->species;}
 char* Jedi::getMilitaryRank() {return this->militaryRank;}
 
-void Jedi::print() {
-    cout << "Jedi name: " << this->name << endl;
-    switch (this->rank) {
-        case Youngling:
-            cout << "Jedi rank: Cadet" << endl;
-            break;
-        case Padawan:
-            cout << "Jedi rank: Padawan" << endl;
-            break;
-        case Knight:
-            cout << "Jedi rank: Jedi Knight" << endl;
-            break;
-        case Consular:
-            cout << "Jedi rank: Jedi Consular" << endl;
-            break;
-        case Guardian:
-            cout << "Jedi rank: Jedi Guardian" << endl;
-            break;
-        case Sentinel:
-            cout << "Jedi rank: Jedi Sentinel" << endl;
-            break;
-        case Master:
-            cout << "Jedi rank: Jedi Master" << endl;
-            break;
-        default:
-            cout << "Jedi rank: Cadet" << endl;
-            break;
+
+std::ostream& operator<<(std::ostream& os, Jedi& jedi) {
+    os << jedi.name << endl;
+    switch (jedi.rank) {
+        case (jediRank)0: os << "Youngling" << endl; break;
+        case (jediRank)1: os << "Padawan" << endl; break;
+        case (jediRank)2: os << "Knight" << endl; break;
+        case (jediRank)3: os << "Consular" << endl; break;
+        case (jediRank)4: os << "Guardian" << endl; break;
+        case (jediRank)5: os << "Sentinel" << endl; break;
+        case (jediRank)6: os << "Master" << endl; break;
+        default: os << "Invalid rank" << endl; break;
     }
-    cout << "Jedi midi-chlorian: " << this->midiChlorian << endl;
-    cout << "Jedi's planet: " << endl;
-    this->planet.print();
-    cout << endl;
-    cout << "Jedi species: " << this->species << endl;
-    cout << "Jedi military rank: " << this->militaryRank << endl;
+    os << jedi.midiChlorian << endl;
+    os << jedi.planet.getName() << endl;
+    os << jedi.species << endl;
+    os << jedi.militaryRank << endl;
+    return os;
 }
+
+//void Jedi::print() {
+//    cout << "Jedi name: " << this->name << endl;
+//    switch (this->rank) {
+//        case Youngling:
+//            cout << "Jedi rank: Cadet" << endl;
+//            break;
+//        case Padawan:
+//            cout << "Jedi rank: Padawan" << endl;
+//            break;
+//        case Knight:
+//            cout << "Jedi rank: Jedi Knight" << endl;
+//            break;
+//        case Consular:
+//            cout << "Jedi rank: Jedi Consular" << endl;
+//            break;
+//        case Guardian:
+//            cout << "Jedi rank: Jedi Guardian" << endl;
+//            break;
+//        case Sentinel:
+//            cout << "Jedi rank: Jedi Sentinel" << endl;
+//            break;
+//        case Master:
+//            cout << "Jedi rank: Jedi Master" << endl;
+//            break;
+//        default:
+//            cout << "Jedi rank: Cadet" << endl;
+//            break;
+//    }
+//    cout << "Jedi midi-chlorian: " << this->midiChlorian << endl;
+//    cout << "Jedi's planet: " << endl;
+//    this->planet.print();
+//    cout << endl;
+//    cout << "Jedi species: " << this->species << endl;
+//    cout << "Jedi military rank: " << this->militaryRank << endl;
+//}
