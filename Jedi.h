@@ -47,5 +47,6 @@ public:
     char* getMilitaryRank();
 
     friend std::ostream& operator<<(std::ostream& os, Jedi& jedi);
+    friend std::istream& operator>>(std::istream& is, Jedi& jedi);
    // void print();
 };

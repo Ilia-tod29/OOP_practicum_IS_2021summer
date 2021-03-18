@@ -19,6 +19,24 @@ int main() {
     cout << "-----------------------print() \\/ -----------------------" << endl;
     earth.print<Planet>(earth);
     earth.print(Ilia);
-    earth.print(ObiWan);
+//    earth.print(ObiWan);// -> throws: Process finished with exit code -1073740940 (0xC0000374)
+    cout << ObiWan << endl;
+    cin >> earth;
+    cout << earth;
+    cin >> Ilia;
+    cout << Ilia;
+    cin >> ObiWan;
+    cout << ObiWan;
+    earth.read<Planet>(stewjon);
+    earth.print<Planet>(stewjon);
+
+    earth.read<Stormtrooper>(Ilia);
+    earth.print<Stormtrooper>(Ilia);
+
+//    earth.read<Jedi>(ObiWan);// -> throws: Process finished with exit code -1073740940 (0xC0000374)
+//    cout << ObiWan;
+
+    cin >> ObiWan;
+    cout << ObiWan;
     return 0;
 }

@@ -1,5 +1,6 @@
 #include "Planet.h"
 
+
 void Planet::cpy(const Planet& _planet) {
     this->name = new char[strlen(_planet.name) + 1];
     strcpy(this->name, _planet.name);
@@ -105,6 +106,38 @@ std::ostream& operator<<(std::ostream& os, const Planet& planet) {
         default: os << "Invalid type" << endl; break;
     }
     return os;
+}
+
+std::istream& operator >> (std::istream& is, Planet& planet) {
+    delete[] planet.name;
+    delete[] planet.planetSystem;
+    delete[] planet.republic;
+
+    char* container = new char[100];
+    int temp;
+
+    cout << "Enter planet name:";
+    is.getline(container, 100);
+    planet.name = new char[strlen(container) + 1];
+    strcpy(planet.name, container);
+
+    cout << "Enter planet system:";
+    is.getline(container, 100);
+    planet.planetSystem = new char[strlen(container) + 1];
+    strcpy(planet.planetSystem, container);
+
+    cout << "Enter republic:";
+    is.getline(container, 1000);
+    planet.republic = new char[strlen(container) + 1];
+    strcpy(planet.republic, container);
+    delete[] container;
+
+    cout << "Enter planet type:";
+    is >> temp;
+    planet.type = (planetType)temp;
+    is.ignore();
+
+    return is;
 }
 
 //template<class T>

@@ -103,6 +103,46 @@ std::ostream& operator<<(std::ostream& os, Jedi& jedi) {
     return os;
 }
 
+std::istream& operator>>(std::istream& is, Jedi& jedi) {
+    delete[] jedi.name;
+    delete[] jedi.species;
+    delete[] jedi.militaryRank;
+
+    char* container = new char[100];
+    int temp;
+
+    cout << "Enter name:";
+    is.getline(container, 100);
+    jedi.name = new char[strlen(container) + 1];
+    strcpy(jedi.name,container);
+
+    cout << "Enter rank:";
+    is >> temp;
+    jedi.rank = (jediRank)temp;
+
+    cout << "Enter midiChlorian:";
+    is >> jedi.midiChlorian;
+
+    is.ignore();
+
+    is >> jedi.planet;
+
+    cout << "Enter species:";
+    is.getline(container, 100);
+    jedi.species = new char[strlen(container) + 1];
+    strcpy(jedi.species,container);
+
+    cout << "Enter military rank:";
+    is.getline(container, 100);
+    jedi.militaryRank = new char[strlen(container) + 1];
+    strcpy(jedi.militaryRank,container);
+
+    is.ignore();
+    delete[] container;
+    return is;
+}
+
+
 //void Jedi::print() {
 //    cout << "Jedi name: " << this->name << endl;
 //    switch (this->rank) {

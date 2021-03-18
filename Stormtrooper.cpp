@@ -87,6 +87,36 @@ std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper) {
     return os;
 }
 
+std::istream& operator>>(std::istream& is, Stormtrooper& stormtrooper) {
+    delete[] stormtrooper.id;
+    delete[] stormtrooper.type;
+
+    char* container = new char[100];
+    int temp;
+
+    cout << "Enter id:";
+    is.getline(container, 100);
+    stormtrooper.id = new char[strlen(container) + 1];
+    strcpy(stormtrooper.id, container);
+
+    cout << "Enter rank:";
+    is >> temp;
+    stormtrooper.rank = (stormtrooperRank)temp;
+
+    is.ignore();
+
+    cout << "Enter type:";
+    is.getline(container, 100);
+    stormtrooper.type = new char[strlen(container) + 1];
+    strcpy(stormtrooper.type, container);
+    delete[] container;
+
+    cin >> stormtrooper.planet;
+    is.ignore();
+
+    return is;
+}
+
 //void Stormtrooper::print() const {
 //    cout << "Stormtrooper ID: " << this->id << endl;
 //    switch (this->rank) {

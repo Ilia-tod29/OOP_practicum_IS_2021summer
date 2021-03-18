@@ -43,5 +43,6 @@ public:
     Planet getPlanet();
 
     friend std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper);
+    friend std::istream& operator>>(std::istream& is, Stormtrooper& stormtrooper);
    // void print() const;
 };
