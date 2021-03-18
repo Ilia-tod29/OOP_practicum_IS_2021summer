@@ -48,13 +48,14 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Planet& planet);
     friend std::istream& operator>>(std::istream& is, Planet& planet);
 
-    template<class Print>
-    void print(Print toPrint){
-        cout << toPrint << endl;
-    }
-
-    template<class Input>
-    void read(Input toRead){
-        cin >> toRead;
-    }
 };
+
+template<class Print>
+void print(Print toPrint){
+    cout << toPrint << endl;
+}
+
+template<class Input>
+void read(Input &toRead){
+    cin >> toRead;
+}

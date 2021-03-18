@@ -17,9 +17,9 @@ int main() {
     cout << earth << endl;
     cout << "-----------------------operator '<<' ^ -----------------------" << endl;
     cout << "-----------------------print() \\/ -----------------------" << endl;
-    earth.print<Planet>(earth);
-    earth.print(Ilia);
-//    earth.print(ObiWan);// -> throws: Process finished with exit code -1073740940 (0xC0000374)
+    print<Planet>(earth);
+    print<Stormtrooper>(Ilia);
+    print(ObiWan);
     cout << ObiWan << endl;
     cin >> earth;
     cout << earth;
@@ -27,16 +27,13 @@ int main() {
     cout << Ilia;
     cin >> ObiWan;
     cout << ObiWan;
-    earth.read<Planet>(stewjon);
-    earth.print<Planet>(stewjon);
+    read<Planet>(stewjon);
+    print<Planet>(stewjon);
 
-    earth.read<Stormtrooper>(Ilia);
-    earth.print<Stormtrooper>(Ilia);
+    read<Stormtrooper>(Ilia);
+    print<Stormtrooper>(Ilia);
 
-//    earth.read<Jedi>(ObiWan);// -> throws: Process finished with exit code -1073740940 (0xC0000374)
-//    cout << ObiWan;
-
-    cin >> ObiWan;
+    read<Jedi>(ObiWan);
     cout << ObiWan;
     return 0;
 }
