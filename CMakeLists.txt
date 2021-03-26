@@ -3,4 +3,4 @@ project(starWarsHomework)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(starWarsHomework main.cpp Planet.h Planet.cpp Stormtrooper.h Stormtrooper.cpp Jedi.h Jedi.cpp BattleShip.h cmake-build-debug/BatleShip.cpp)
+add_executable(starWarsHomework main.cpp Planet.h Planet.cpp Stormtrooper.h Stormtrooper.cpp Jedi.h Jedi.cpp BattleShip.h)

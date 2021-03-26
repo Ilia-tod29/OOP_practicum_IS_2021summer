@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/starWarsHomework.dir/BatleShip.cpp.obj"
   "CMakeFiles/starWarsHomework.dir/Jedi.cpp.obj"
   "CMakeFiles/starWarsHomework.dir/Planet.cpp.obj"
   "CMakeFiles/starWarsHomework.dir/Stormtrooper.cpp.obj"
