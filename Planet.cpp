@@ -76,10 +76,10 @@ void Planet::setType(const planetType _type) {
 }
 
 
-char* Planet::getName() {return this->name;}
-char* Planet::getPlanetSystem() {return this->planetSystem;}
-char* Planet::getRepublic(){return this->republic;}
-planetType Planet::getType(){return this->type;}
+char* Planet::getName() const {return this->name;}
+char* Planet::getPlanetSystem() const {return this->planetSystem;}
+char* Planet::getRepublic() const {return this->republic;}
+planetType Planet::getType() const {return this->type;}
 
 
 std::ostream& operator<<(std::ostream& os, const Planet& planet) {

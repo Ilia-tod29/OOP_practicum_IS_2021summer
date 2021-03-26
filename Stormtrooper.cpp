@@ -64,13 +64,13 @@ void Stormtrooper::setPlanet(const Planet _planet) {
     this->planet = _planet;
 }
 
-char* Stormtrooper::getId() {return this->id;}
-stormtrooperRank Stormtrooper::getRank() {return this->rank;}
-char* Stormtrooper::getType() {return this->type;}
-Planet Stormtrooper::getPlanet() {return this->planet;}
+char* Stormtrooper::getId() const {return this->id;}
+stormtrooperRank Stormtrooper::getRank() const {return this->rank;}
+char* Stormtrooper::getType() const {return this->type;}
+Planet Stormtrooper::getPlanet() const {return this->planet;}
 
 
-std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper) {
+std::ostream& operator<<(std::ostream& os, const Stormtrooper& stormtrooper) {
     os << stormtrooper.id << endl;
     switch (stormtrooper.rank) {
         case (stormtrooperRank)0: os << "Cadet"<< endl; break;

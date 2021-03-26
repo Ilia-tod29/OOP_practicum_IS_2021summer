@@ -142,6 +142,33 @@ starWarsHomework/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\starWarsHomework.dir\build.make CMakeFiles/starWarsHomework.dir/build
 .PHONY : starWarsHomework/fast
 
+BatleShip.obj: BatleShip.cpp.obj
+
+.PHONY : BatleShip.obj
+
+# target to build an object file
+BatleShip.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starWarsHomework.dir\build.make CMakeFiles/starWarsHomework.dir/BatleShip.cpp.obj
+.PHONY : BatleShip.cpp.obj
+
+BatleShip.i: BatleShip.cpp.i
+
+.PHONY : BatleShip.i
+
+# target to preprocess a source file
+BatleShip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starWarsHomework.dir\build.make CMakeFiles/starWarsHomework.dir/BatleShip.cpp.i
+.PHONY : BatleShip.cpp.i
+
+BatleShip.s: BatleShip.cpp.s
+
+.PHONY : BatleShip.s
+
+# target to generate assembly for a file
+BatleShip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\starWarsHomework.dir\build.make CMakeFiles/starWarsHomework.dir/BatleShip.cpp.s
+.PHONY : BatleShip.cpp.s
+
 Jedi.obj: Jedi.cpp.obj
 
 .PHONY : Jedi.obj
@@ -259,6 +286,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... starWarsHomework
+	@echo ... BatleShip.obj
+	@echo ... BatleShip.i
+	@echo ... BatleShip.s
 	@echo ... Jedi.obj
 	@echo ... Jedi.i
 	@echo ... Jedi.s

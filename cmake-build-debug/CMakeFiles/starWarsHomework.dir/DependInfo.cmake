@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/BatleShip.cpp" "E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/CMakeFiles/starWarsHomework.dir/BatleShip.cpp.obj"
   "E:/FMI/OOP/Practicums/starWarsHomework/Jedi.cpp" "E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/CMakeFiles/starWarsHomework.dir/Jedi.cpp.obj"
   "E:/FMI/OOP/Practicums/starWarsHomework/Planet.cpp" "E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/CMakeFiles/starWarsHomework.dir/Planet.cpp.obj"
   "E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.cpp" "E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/CMakeFiles/starWarsHomework.dir/Stormtrooper.cpp.obj"

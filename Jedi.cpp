@@ -76,15 +76,15 @@ void Jedi::setMilitaryRank(const char* _militaryRank) {
     strcpy(this->militaryRank, _militaryRank);
 }
 
-char* Jedi::getName() {return this->name;}
-jediRank Jedi::getRank() {return this->rank;}
-char* Jedi::getMidiChlorian() {return this->militaryRank;}
-Planet Jedi::getPlanet() {return this->planet;}
-char* Jedi::getSpecies() {return this->species;}
-char* Jedi::getMilitaryRank() {return this->militaryRank;}
+char* Jedi::getName() const {return this->name;}
+jediRank Jedi::getRank() const {return this->rank;}
+char* Jedi::getMidiChlorian() const {return this->militaryRank;}
+Planet Jedi::getPlanet() const {return this->planet;}
+char* Jedi::getSpecies() const {return this->species;}
+char* Jedi::getMilitaryRank() const {return this->militaryRank;}
 
 
-std::ostream& operator<<(std::ostream& os, Jedi& jedi) {
+std::ostream& operator<<(std::ostream& os, const Jedi& jedi) {
     os << jedi.name << endl;
     switch (jedi.rank) {
         case (jediRank)0: os << "Youngling" << endl; break;

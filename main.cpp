@@ -19,7 +19,6 @@ int main() {
     cout << "-----------------------print() \\/ -----------------------" << endl;
     print<Planet>(earth);
     print<Stormtrooper>(Ilia);
-    print(ObiWan);
     cout << ObiWan << endl;
     cin >> earth;
     cout << earth;

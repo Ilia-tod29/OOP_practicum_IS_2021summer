@@ -37,12 +37,12 @@ public:
     void setType(const char* _type);
     void setPlanet(const Planet _planet);
 
-    char* getId();
-    stormtrooperRank getRank();
-    char* getType();
-    Planet getPlanet();
+    char* getId() const;
+    stormtrooperRank getRank() const;
+    char* getType() const;
+    Planet getPlanet() const;
 
-    friend std::ostream& operator<<(std::ostream& os, Stormtrooper& stormtrooper);
+    friend std::ostream& operator<<(std::ostream& os, const Stormtrooper& stormtrooper);
     friend std::istream& operator>>(std::istream& is, Stormtrooper& stormtrooper);
    // void print() const;
 };

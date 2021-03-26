@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-E:/FMI/OOP/Practicums/starWarsHomework/Jedi.cpp
-Jedi.h
-E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
-Planet.h
-E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
-
 E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
 Planet.h
 E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
@@ -20,21 +14,11 @@ iostream
 cstring
 -
 
-E:/FMI/OOP/Practicums/starWarsHomework/Planet.cpp
-Planet.h
-E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
-
 E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
 iostream
 -
 cstring
 -
-
-E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.cpp
-Stormtrooper.h
-E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
-Planet.h
-E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
 
 E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
 Planet.h

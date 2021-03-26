@@ -40,10 +40,10 @@ public:
     void setRepublic(const char* _republic);
     void setType(const planetType _type);
 
-    char* getName();
-    char* getPlanetSystem();
-    char* getRepublic();
-    planetType getType();
+    char* getName() const;
+    char* getPlanetSystem() const;
+    char* getRepublic() const;
+    planetType getType() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Planet& planet);
     friend std::istream& operator>>(std::istream& is, Planet& planet);

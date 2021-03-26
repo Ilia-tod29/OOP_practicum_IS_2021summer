@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/FMI/OOP/Practicums/starWarsHomework/BattleShip.h">
+			<Option target="starWarsHomework"/>
+		</Unit>
 		<Unit filename="E:/FMI/OOP/Practicums/starWarsHomework/Jedi.cpp">
 			<Option target="starWarsHomework"/>
 		</Unit>
@@ -96,6 +99,9 @@
 			<Option target="starWarsHomework"/>
 		</Unit>
 		<Unit filename="E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h">
+			<Option target="starWarsHomework"/>
+		</Unit>
+		<Unit filename="E:/FMI/OOP/Practicums/starWarsHomework/cmake-build-debug/BatleShip.cpp">
 			<Option target="starWarsHomework"/>
 		</Unit>
 		<Unit filename="E:/FMI/OOP/Practicums/starWarsHomework/main.cpp">

@@ -39,14 +39,14 @@ public:
     void setSpecies(const char* _species);
     void setMilitaryRank(const char* _militaryRank);
 
-    char* getName();
-    jediRank getRank();
-    char* getMidiChlorian();
-    Planet getPlanet();
-    char* getSpecies();
-    char* getMilitaryRank();
+    char* getName() const;
+    jediRank getRank() const;
+    char* getMidiChlorian() const;
+    Planet getPlanet() const;
+    char* getSpecies() const;
+    char* getMilitaryRank() const;
 
-    friend std::ostream& operator<<(std::ostream& os, Jedi& jedi);
+    friend std::ostream& operator<<(std::ostream& os, const Jedi& jedi);
     friend std::istream& operator>>(std::istream& is, Jedi& jedi);
    // void print();
 };
