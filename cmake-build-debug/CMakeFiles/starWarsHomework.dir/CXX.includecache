@@ -7,10 +7,6 @@
 #IncludeRegexTransform: 
 
 E:/FMI/OOP/Practicums/starWarsHomework/BattleShip.h
-Jedi.h
-E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
-Stormtrooper.h
-E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
 iostream
 -
 cstring

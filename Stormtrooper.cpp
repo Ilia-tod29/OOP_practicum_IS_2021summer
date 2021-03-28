@@ -14,12 +14,7 @@ void Stormtrooper::vanish(){
     delete[] this->type;
 }
 
-Stormtrooper::Stormtrooper() {
-    this->id = nullptr;
-    this->rank = (stormtrooperRank)0;
-    this->type = nullptr;
-    this->planet = {};
-}
+Stormtrooper::Stormtrooper() : id(nullptr), rank((stormtrooperRank)0), type(nullptr), planet({}) {}
 
 Stormtrooper::Stormtrooper(const char* _id, const stormtrooperRank _rank, const char* _type, const Planet _planet){
     this->id = new char[strlen(_id) + 1];

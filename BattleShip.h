@@ -3,9 +3,6 @@
 //
 #pragma once
 
-#include "Jedi.h"
-#include "Stormtrooper.h"
-
 #include <iostream>
 #include <cstring>
 
@@ -37,30 +34,20 @@ private:
         this->shipSize = 0;
     }
 public:
-    BattleShip() {
-        this->speed = 0;
-        this->cannonsCount = 0;
-        this->hyperJump = false;
-        this->shipSize = 0;
-        this->pilot = {};
-    }
-    BattleShip(const float _speed, const size_t _cannonCount, const bool _hyperJump, const float _shipSize, const Pilot _pilot) {
-        this->speed = _speed;
-        this->cannonsCount = _cannonCount;
-        this->hyperJump = _hyperJump;
-        this->shipSize = _shipSize;
-        this->pilot = _pilot;
-//        try {
-//            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
-//                this->pilot = _pilot;
-//            }
-//            else {
-//                throw("Invalid pilot");
-//            }
-//        }
-//        catch(const char* err) {
-//            cout << err << endl;
-//        }
+    BattleShip() : speed(0), cannonsCount(0), hyperJump(0), shipSize(0), pilot({}) {}
+    BattleShip(const float _speed, const size_t _cannonCount, const bool _hyperJump, const float _shipSize, const Pilot _pilot) :
+        speed(_speed), cannonsCount(_cannonCount), hyperJump(_hyperJump), shipSize(_shipSize){
+        try {
+            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
+                this->pilot = _pilot;
+            }
+            else {
+                throw("Invalid pilot");
+            }
+        }
+        catch(const char* err) {
+            cout << err << endl;
+        }
     }
     BattleShip(const BattleShip& other) {
         cpy(other);
@@ -76,19 +63,19 @@ public:
     void setCannonCount(const size_t _cannonCount) {this->cannonsCount = _cannonCount;}
     void setHyperJump(const bool _hyperJump) {this->hyperJump = _hyperJump;}
     void setShipSize(const float _shipSize) {this->shipSize = _shipSize;}
-//    void setPilot(const Pilot _pilot) {
-//        try {
-//            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
-//                this->pilot = _pilot;
-//            }
-//            else {
-//                throw("Invalid pilot");
-//            }
-//        }
-//        catch(const char* err) {
-//            cout << err << endl;
-//        }
-//    }
+    void setPilot(const Pilot _pilot) {
+        try {
+            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
+                this->pilot = _pilot;
+            }
+            else {
+                throw("Invalid pilot");
+            }
+        }
+        catch(const char* err) {
+            cout << err << endl;
+        }
+    }
 
     float getSpeed() const {return this->speed;}
     size_t getCannonCount() const {return this->cannonsCount;}
@@ -113,7 +100,7 @@ public:
         return os;
     }
     friend std::istream& operator>>(std::istream is, BattleShip& battleShip) {
-        is >> battleShip.speed >> battleShip.cannonsCount >> battleShip.hyperJump >> battleShip.shipSize; //>> battleShip.pilot;
+        is >> battleShip.speed >> battleShip.cannonsCount >> battleShip.hyperJump >> battleShip.shipSize >> battleShip.pilot;
         return is;
     }
 

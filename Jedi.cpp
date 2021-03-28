@@ -23,14 +23,7 @@ void Jedi::vanish() {
     delete[] this->militaryRank;
 }
 
-Jedi::Jedi() {
-    this->name = nullptr;
-    this->rank = (jediRank)0;
-    this->midiChlorian = 0.0;
-    this->planet = {};
-    this->species = nullptr;
-    this->militaryRank = nullptr;
-}
+Jedi::Jedi() : name(nullptr), rank((jediRank)0), midiChlorian(0.0), planet({}), species(nullptr), militaryRank(nullptr) {}
 
 Jedi::Jedi(const char* _name, const jediRank _rank, const float _midiChlorian, const Planet _planet, const char* _species, const char* _militaryRank) {
     this->name = new char[strlen(_name) + 1];

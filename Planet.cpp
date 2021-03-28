@@ -20,12 +20,7 @@ void Planet::vanish() {
     delete[] this->republic;
 }
 
-Planet::Planet(){
-    this->name = nullptr;
-    this->planetSystem = nullptr;
-    this->republic = nullptr;
-    this->type = (planetType)0;
-}
+Planet::Planet() : name(nullptr), planetSystem(nullptr), republic(nullptr), type((planetType)0){}
 
 Planet::Planet(const char* _name, const char* _planetSystem, const char* _republic, const planetType _type){
     this->name = new char[strlen(_name) + 1];
@@ -139,11 +134,6 @@ std::istream& operator >> (std::istream& is, Planet& planet) {
 
     return is;
 }
-
-//template<class T>
-//void Planet::print(T toPrint) {
-//    cout << toPrint << endl;
-//}
 
 //void Planet::print() const {
 //    cout << "Planet name: \'" << this->name << "\'. ";
