@@ -1,5 +1,4 @@
 #include "Stormtrooper.h"
-#include "Planet.h"
 
 void Stormtrooper::cpy(const Stormtrooper& _stormtrooper) {
     this->id = new char[strlen(_stormtrooper.id) + 1];

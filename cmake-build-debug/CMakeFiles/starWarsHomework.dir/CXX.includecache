@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+E:/FMI/OOP/Practicums/starWarsHomework/BattleShip.h
+Jedi.h
+E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
+Stormtrooper.h
+E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
+iostream
+-
+cstring
+-
+
 E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
 Planet.h
 E:/FMI/OOP/Practicums/starWarsHomework/Planet.h
@@ -35,6 +45,8 @@ Stormtrooper.h
 E:/FMI/OOP/Practicums/starWarsHomework/Stormtrooper.h
 Jedi.h
 E:/FMI/OOP/Practicums/starWarsHomework/Jedi.h
+BattleShip.h
+E:/FMI/OOP/Practicums/starWarsHomework/BattleShip.h
 iostream
 -
 

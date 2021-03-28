@@ -1,13 +1,18 @@
 #include "Jedi.h"
-#include "Planet.h"
 
 void Jedi::cpy(const Jedi& _jedi) {
     this->name = new char[strlen(_jedi.name) + 1];
     strcpy(this->name, _jedi.name);
+
     this->rank = _jedi.rank;
+
+    this->midiChlorian = _jedi.midiChlorian;
+
     this->planet = _jedi.planet;
+
     this->species= new char[strlen(_jedi.species) + 1];
     strcpy(this->species, _jedi.species);
+
     this->militaryRank = new char[strlen(_jedi.militaryRank) + 1];
     strcpy(this->militaryRank, _jedi.militaryRank);
 }
@@ -30,13 +35,22 @@ Jedi::Jedi() {
 Jedi::Jedi(const char* _name, const jediRank _rank, const float _midiChlorian, const Planet _planet, const char* _species, const char* _militaryRank) {
     this->name = new char[strlen(_name) + 1];
     strcpy(this->name, _name);
+
     this->rank = _rank;
+
     this->midiChlorian = _midiChlorian;
+
     this->planet = _planet;
+
     this->species = new char[strlen(_species) + 1];
     strcpy(this->species, _species);
+
     this->militaryRank = new char[strlen(_militaryRank) + 1];
     strcpy(this->militaryRank, _militaryRank);
+}
+
+Jedi::Jedi(const Jedi& other) {
+    cpy(other);
 }
 
 Jedi& Jedi::operator = (const Jedi& jedi) {

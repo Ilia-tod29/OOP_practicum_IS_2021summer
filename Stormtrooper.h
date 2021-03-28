@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Planet.h"
 #include <iostream>
 #include <cstring>

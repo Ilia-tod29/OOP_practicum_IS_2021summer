@@ -12,6 +12,7 @@ CMakeFiles/starWarsHomework.dir/Stormtrooper.cpp.obj: ../Planet.h
 CMakeFiles/starWarsHomework.dir/Stormtrooper.cpp.obj: ../Stormtrooper.cpp
 CMakeFiles/starWarsHomework.dir/Stormtrooper.cpp.obj: ../Stormtrooper.h
 
+CMakeFiles/starWarsHomework.dir/main.cpp.obj: ../BattleShip.h
 CMakeFiles/starWarsHomework.dir/main.cpp.obj: ../Jedi.h
 CMakeFiles/starWarsHomework.dir/main.cpp.obj: ../Planet.h
 CMakeFiles/starWarsHomework.dir/main.cpp.obj: ../Stormtrooper.h

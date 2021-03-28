@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Planet.h"
 #include <iostream>
 #include <cstring>
@@ -27,6 +29,8 @@ public:
     Jedi();
 
     Jedi(const char* _name, const jediRank _rank, const float _midiChlorian, const Planet _planet, const char* _species, const char* _militaryRank);
+
+    Jedi(const Jedi& other);
 
     Jedi& operator = (const Jedi& jedi);
 

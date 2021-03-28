@@ -3,6 +3,9 @@
 //
 #pragma once
 
+#include "Jedi.h"
+#include "Stormtrooper.h"
+
 #include <iostream>
 #include <cstring>
 
@@ -35,21 +38,29 @@ private:
     }
 public:
     BattleShip() {
-        vanish();
+        this->speed = 0;
+        this->cannonsCount = 0;
+        this->hyperJump = false;
+        this->shipSize = 0;
+        this->pilot = {};
     }
     BattleShip(const float _speed, const size_t _cannonCount, const bool _hyperJump, const float _shipSize, const Pilot _pilot) {
         this->speed = _speed;
         this->cannonsCount = _cannonCount;
         this->hyperJump = _hyperJump;
         this->shipSize = _shipSize;
-        try {
-            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
-                this->pilot = _pilot;
-            }
-        }
-        catch() {
-            cout << "Invalid Pilot" << endl;
-        }
+        this->pilot = _pilot;
+//        try {
+//            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
+//                this->pilot = _pilot;
+//            }
+//            else {
+//                throw("Invalid pilot");
+//            }
+//        }
+//        catch(const char* err) {
+//            cout << err << endl;
+//        }
     }
     BattleShip(const BattleShip& other) {
         cpy(other);
@@ -61,37 +72,48 @@ public:
         vanish();
     };
 
-    void setSpeed(const float _speed) {this->speed = _speed};
-    void setCannonCount(const size_t _cannonCount) {this->cannonsCount = _cannonCount};
-    void setHyperJump(const bool _hyperJump) {this->hyperJump = _hyperJump};
-    void setShipSize(const float _shipSize) {this->shipSize = _shipSize};
-    void setPilot(const Pilot _pilot) {
-        try {
-            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
-                this->pilot = _pilot;
-            }
-        }
-        catch() {
-            cout << "Invalid Pilot" << endl;
-        }
+    void setSpeed(const float _speed) {this->speed = _speed;}
+    void setCannonCount(const size_t _cannonCount) {this->cannonsCount = _cannonCount;}
+    void setHyperJump(const bool _hyperJump) {this->hyperJump = _hyperJump;}
+    void setShipSize(const float _shipSize) {this->shipSize = _shipSize;}
+//    void setPilot(const Pilot _pilot) {
+//        try {
+//            if (typeid(pilot) == typeid(Jedi) || typeid(pilot) == typeid(Stormtrooper)) {
+//                this->pilot = _pilot;
+//            }
+//            else {
+//                throw("Invalid pilot");
+//            }
+//        }
+//        catch(const char* err) {
+//            cout << err << endl;
+//        }
+//    }
+
+    float getSpeed() const {return this->speed;}
+    size_t getCannonCount() const {return this->cannonsCount;}
+    bool getHyperJump() const {return this->hyperJump;}
+    float getShipSize() const {return this->shipSize;}
+    Pilot getPilot() const {return this->pilot;}
+
+    void print() {
+        cout << "Max speed: " << this->speed << endl;
+        cout << "Cannon count: " << this->cannonsCount << endl;
+        cout << "Hyperjump: " << (this->hyperJump ? "Yes" : "No") << endl;
+        cout << "Size of the ship (in meters): " << this->shipSize << endl;
+        cout << "Pilot: " << endl << this->pilot << endl;
     }
 
-    float getSpeed() const {return this->speed}
-    size_t getCannonCount() const {return this->cannonsCount}
-    bool getHyperJump() const {return this->hyperJump}
-    float getShipSize() const {return this->shipSize}
-    Pilot getPilot() const {return this->pilot}
-
-    friend std::ostream& operator<<(std::ostream os, const BattleShip& battleShip) {
-        os << "Max speed: " << this->speed << endl;
-        os << "Cannon count: " << this->cannonsCount << endl;
-        os << "Hyperjump: " << this->hyperJump ? "Yes" : "No" << endl;
-        os << "Size of the ship (in meters): " << this->shipSize << endl;
-        os << "Pilot: " << endl << this->pilot << endl;
+    friend std::ostream& operator<<(std::ostream& os, const BattleShip& battleShip) {
+        os << "Max speed: " << battleShip.speed << endl;
+        os << "Cannon count: " << battleShip.cannonsCount << endl;
+        os << "Hyperjump: " << (battleShip.hyperJump ? "Yes" : "No") << endl;
+        os << "Size of the ship (in meters): " << battleShip.shipSize << endl;
+        os << "Pilot: " << endl << battleShip.pilot << endl;
         return os;
     }
     friend std::istream& operator>>(std::istream is, BattleShip& battleShip) {
-        is >> this->speed >> this->cannonsCount >> this->hyperJump >> this->shipSize >> this->pilot;
+        is >> battleShip.speed >> battleShip.cannonsCount >> battleShip.hyperJump >> battleShip.shipSize; //>> battleShip.pilot;
         return is;
     }
 
